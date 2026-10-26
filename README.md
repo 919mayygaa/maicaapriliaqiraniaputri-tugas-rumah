@@ -3,7 +3,7 @@ Website portofolio pribadi yang saya buat di Kelas Industri UBIG (Paket 1, Mingg
 Website ini tampil rapi di ponsel, tablet, dan laptop.
 ## Tampilan
 ![Tampilan beranda portofolio](img/jadwal.PNG)
-![Tampilan beranda portofolio](img/portofolio.PNG)
+![Tampilan beranda portofolio](img/Screenshot%202026-10-26%20114132.png)
 ![Tampilan beranda portofolio](img/proyek-kontak.png)
 ## Fitur
 - Halaman **Beranda** berisi profil, hobi, cita-cita, keahlian, dan jadwal belajar
@@ -16,4 +16,4 @@ Website ini tampil rapi di ponsel, tablet, dan laptop.
 - Git dan GitHub
 ## Tautan
 - Website: menyusul setelah *deploy* ke Vercel
-- Dibuat oleh: Ananditya Zahra, SMKS BRANTAS KARANGKATES
+- Dibuat oleh: Maica Aprilia Qirania Putri, SMKS BRANTAS KARANGKATES
