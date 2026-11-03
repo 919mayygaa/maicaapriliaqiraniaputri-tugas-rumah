@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maica Aprilia Qirania Putri | Kalkulator Nilai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/kalkulator.js" defer></script>
+</head>
+<body>
+  <header>
+    <button id="tombolTema">🌙 Mode Gelap</button>
+    <div class="container navbar">
+      <h1>Maica Aprilia Qirania Putri</h1>
+      <nav class="menu-laptop">
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="proyek.html">Proyek</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+          <li><a href="kalkulator.html">Kalkulator</a></li>
+        </ul>
+      </nav>
+      <!-- Tantangan: menu ponsel yang bisa dibuka-tutup -->
+      <details class="menu-ponsel">
+        <summary>Menu</summary>
+        <nav>
+          <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="proyek.html">Proyek</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+            <li><a href="kalkulator.html">Kalkulator</a></li>
+          </ul>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="kartu">
+        <h2>Kalkulator Nilai</h2>
+        <p>Masukkan nilai tugas, UTS, dan UAS untuk menghitung nilai akhir.</p>
+
+        <form id="form-kalkulator">
+          <p>
+            <label for="nilai-tugas">Nilai tugas</label><br>
+            <input type="number" id="nilai-tugas" name="nilai-tugas" min="0" max="100" step="1" placeholder="Contoh: 85" required>
+          </p>
+          <p>
+            <label for="nilai-uts">Nilai UTS</label><br>
+            <input type="number" id="nilai-uts" name="nilai-uts" min="0" max="100" step="1" placeholder="Contoh: 30" required>
+          </p>
+          <p>
+            <label for="nilai-uas">Nilai UAS</label><br>
+            <input type="number" id="nilai-uas" name="nilai-uas" min="0" max="100" step="1" placeholder="Contoh: 90" required>
+          </p>
+          <button type="submit">Hitung Nilai</button>
+        </form>
+        <p id="hasil-kalkulator" aria-live="polite" hidden></p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Kontak: <a href="mailto:maicaxpplg0@gmail.com" target="_blank">maicaxpplg0@gmail.com</a> |
+      <a href="https://github.com/919mayygaa" target="_blank">GitHub</a> |
+      <a href="https://www.youtube.com/@maicaxpplg_1" target="_blank">YouTube</a></p>
+    <p>&copy; 2026 Maica Aprilia Qirania Putri. Dibuat di Kelas Industri UBIG.</p>
+  </footer>
+    <script src="js/latihan.js"></script>
+    <script src="js/tema.js"></script>
+</body>
+</html>
