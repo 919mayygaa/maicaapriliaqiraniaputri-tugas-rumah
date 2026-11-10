@@ -7,12 +7,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">"
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/tema.js" defer></script>
 </head>
 <body>
   <header>
-    <button id="tombolTema">🌙 Mode Gelap</button>
     <div class="container navbar">
+      <button id="tombolTema" type="button" aria-pressed="false">🌙 Mode Gelap</button>
       <h1>Maica Aprilia Qirania Putri</h1>
       <nav class="menu-laptop">
         <ul>
@@ -75,11 +77,8 @@
 
         <section class="kartu">
           <h2>Keahlian</h2>
-          <ul>
-            <li>HTML dasar (sedang dipelajari)</li>
-            <li>Mengetik sedikit cepat</li>
-            <li>Mendesain dengan Canva</li>
-          </ul>
+          <ul id="daftar-skill"></ul>
+          <p id="jumlah-skill"></p>
         </section>
       </div>
 
@@ -122,7 +121,5 @@
       <a href="https://www.youtube.com/@maicaxpplg_1" target="_blank">YouTube</a></p>
     <p>&copy; 2026 Maica Aprilia Qirania Putri. Dibuat di Kelas Industri UBIG.</p>
   </footer>
-  <script src="js/latihan.js"></script>
-  <script src="js/tema.js"></script>
 </body>
 </html>

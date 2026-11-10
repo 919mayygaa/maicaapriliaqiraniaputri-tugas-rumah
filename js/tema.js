@@ -1,27 +1,22 @@
-
-// Mengambil tombol mode
 const tombolTema = document.querySelector("#tombolTema");
 
-// Mengambil tema yang tersimpan
-const temaTersimpan = localStorage.getItem("tema");
+if (tombolTema) {
+  const temaTersimpan = localStorage.getItem("tema");
+  const modeGelapAktif = temaTersimpan === "gelap";
 
-// Mengatur tema saat halaman dibuka
-if (temaTersimpan === "gelap") {
-    document.body.classList.add("dark-mode");
-    tombolTema.textContent = "☀️ Mode Terang";
-} else {
-    tombolTema.textContent = "🌙 Mode Gelap";
+  document.body.classList.toggle("dark-mode", modeGelapAktif);
+
+  function perbaruiTombolTema() {
+    const gelapAktif = document.body.classList.contains("dark-mode");
+    tombolTema.textContent = gelapAktif ? "☀️ Mode Terang" : "🌙 Mode Gelap";
+    tombolTema.setAttribute("aria-pressed", String(gelapAktif));
+  }
+
+  perbaruiTombolTema();
+
+  tombolTema.addEventListener("click", () => {
+    const gelapAktif = document.body.classList.toggle("dark-mode");
+    localStorage.setItem("tema", gelapAktif ? "gelap" : "terang");
+    perbaruiTombolTema();
+  });
 }
-
-// Mengubah tema ketika tombol diklik
-tombolTema.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-
-    if (document.body.classList.contains("dark-mode")) {
-        tombolTema.textContent = "☀️ Mode Terang";
-        localStorage.setItem("tema", "gelap");
-    } else {
-        tombolTema.textContent = "🌙 Mode Gelap";
-        localStorage.setItem("tema", "terang");
-    }
-});

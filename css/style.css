@@ -1,4 +1,4 @@
-/* Gaya portofolio Andi Pratama
+/* Gaya portofolio Maica Aprilia Qirania Putri
    Palet: #1D3557 (utama), #E63946 (aksen), #F1FAEE (latar)
    Huruf: Poppins (judul), Inter (isi)
    Tata letak: mobile first, titik ubah 768px (tablet) dan 1024px (laptop) */
@@ -15,6 +15,13 @@ img {
 }
 
 /* 2. Dasar halaman: warna dan huruf */
+:root {
+  --warna-garis: #CCCCCC;
+  --warna-kartu: #FFFFFF;
+  --warna-judul: #0f131a;
+  --warna-latar: #F1FAEE;
+}
+
 body {
   font-family: "Inter", Arial, sans-serif;
   font-size: 1rem;
@@ -185,7 +192,7 @@ th {
 
 /* 6. Form */
 label {
-  font-weight: 600;
+  font-size: 0.875rem;
 }
 
 input, select, textarea {
@@ -262,29 +269,79 @@ footer a {
     font-size: 2.75rem;
   }
 }
-body {
-    background-color: white;
-    color: rgb(0, 0, 0);
+
+/* 10. Filter proyek */
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
-/* MODE GELAP */
+.tombol-filter {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--warna-garis);
+  background-color: var(--warna-kartu);
+  color: var(--warna-judul);
+  cursor: pointer;
+}
+.tombol-filter[aria-pressed="true"] {
+  border-color: #2563EB;
+  background-color: #2563EB;
+  color: #FFFFFF;
+}
+.tombol-filter:focus-visible {
+  outline: 3px solid #F59E0B;
+  outline-offset: 2px;
+}
+.label {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  margin-bottom: 0.5rem;
+  border-radius: 999px;
+  background-color: var(--warna-latar);
+  color: var(--warna-judul);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* 11. Tema gelap */
 body.dark-mode {
-    background-color: #121212;
-    color: white;
+  color-scheme: dark;
+  color: #F1F5F9;
+  background-color: #121827;
+  --warna-garis: #475569;
+  --warna-kartu: #1E293B;
+  --warna-judul: #F1F5F9;
+  --warna-latar: #334155;
 }
 
-/* Mengubah warna bagian website */
-body.dark-mode section,
-body.dark-mode article,
-body.dark-mode .card,
-body.dark-mode .profile-card {
-    background-color: #1e1e1e;
-    color: white;
-}
-
-/* Mengubah warna judul */
 body.dark-mode h1,
 body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode p {
-    color: white;
+body.dark-mode h3 {
+  color: #F1F5F9;
+}
+
+body.dark-mode header h1 {
+  color: #FFFFFF;
+}
+
+body.dark-mode .kartu {
+  background-color: #1E293B;
+  border-color: #475569;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+  color: #F1F5F9;
+  background-color: #1E293B;
+  border-color: #64748B;
+}
+
+body.dark-mode th {
+  background-color: #334155;
+}
+
+body.dark-mode td {
+  border-color: #64748B;
 }
