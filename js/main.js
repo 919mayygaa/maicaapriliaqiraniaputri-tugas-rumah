@@ -57,14 +57,15 @@ const proyek = [
   {
     judul: "Tabel Jadwal Belajar",
     kategori: "HTML",
-    gambar: "img/jadwal.png",
+    gambar: "img/jadwal.PNG",
     alt: "Tangkapan layar tabel jadwal belajar mandiri",
     deskripsi: "Jadwal belajar mingguan dengan thead dan tbody.",
   },
   {
     judul: "Portofolio Responsif",
     kategori: "CSS",
-    gambar: "img/perbandingan Desain Portofolio Maica.png",
+    gambar: "img/Perbandingan Desain Portofolio Maica.png",
+    alt: "Perbandingan desain portofolio Maica",
     deskripsi: "Tampilan responsif untuk ponsel, tablet, dan laptop.",
   },
   {
