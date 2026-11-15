@@ -1,0 +1,44 @@
+[
+  {
+    "judul": "Halaman Profil Pertama",
+    "kategori": "HTML",
+    "gambar": "img/proyek-profil-maica.png",
+    "alt": "Tangkapan layar halaman profil Maica Aprilia Qirania Putri",
+    "deskripsi": "Halaman web pertama saya, dibuat dengan HTML dasar."
+  },
+  {
+    "judul": "Form Kontak",
+    "kategori": "HTML",
+    "gambar": "img/proyek-kontak.png",
+    "alt": "Tangkapan layar form kontak berisi lima isian",
+    "deskripsi": "Form dengan label dan validasi bawaan browser."
+  },
+  {
+    "judul": "Tabel Jadwal Belajar",
+    "kategori": "HTML",
+    "gambar": "img/jadwal.PNG",
+    "alt": "Tangkapan layar tabel jadwal belajar mandiri",
+    "deskripsi": "Jadwal belajar mingguan dengan thead dan tbody."
+  },
+  {
+    "judul": "Portofolio Responsif",
+    "kategori": "CSS",
+    "gambar": "img/Perbandingan Desain Portofolio Maica.png",
+    "alt": "Perbandingan desain portofolio Maica",
+    "deskripsi": "Tampilan responsif untuk ponsel, tablet, dan laptop."
+  },
+  {
+    "judul": "Kalkulator Nilai Rapor",
+    "kategori": "JavaScript",
+    "gambar": "img/latihan.js.png",
+    "alt": "Tangkapan layar kalkulator nilai rapor",
+    "deskripsi": "Menghitung rata-rata dan predikat nilai dengan JavaScript."
+  },
+  {
+    "judul": "Lima Soal Logika",
+    "kategori": "JavaScript",
+    "gambar": "img/logika.js.png",
+    "alt": "Tangkapan layar lima soal logika",
+    "deskripsi": "Lima fungsi logika yang diuji dengan beberapa masukan."
+  }
+]
