@@ -153,7 +153,7 @@ if (daftarProyek && jumlahProyek) {
 
 
 // 5. Repositori GitHub terbaru (halaman Proyek)
-const username = "919mayygaa";
+const username = "919mayygaa-salah";
 const alamatRepo = `https://api.github.com/users/${username}/repos`;
 const pilihan = "?sort=updated&per_page=6";
 
