@@ -38,11 +38,23 @@ const hitungKarakter = document.querySelector("#hitung-karakter");
 
 if (kotakPesan && hitungKarakter) {
   const perbaruiHitungKarakter = () => {
-    hitungKarakter.textContent = `${kotakPesan.value.length}/300 karakter`;
+    hitungKarakter.textContent = `${kotakPesan.value.length}/300 karakter`
+   hampirPenuh = kotakPesan.value.length >= 250;
+    hitungKarakter.textContent = `${kotakPesan.value.length} /250karakter`;
+    classhampirPenuh ? hitungKarakter.classList.add("hampir-penuh") : hitungKarakter.classList.remove("hampir-penuh");
   };
 
   kotakPesan.addEventListener("input", perbaruiHitungKarakter);
-  perbaruiHitungKarakter();
+  perbaruiHitungKarakter()
+  tombolKosongkan.addEventListenerl("click", () => {
+    kotakPesan.value = "0/300 karakter";
+    perbaruiHitungKarakter()
+ 
+  
+  
+   
+  }
+ 
 }
 
 // Proyek: data dan fungsi untuk menampilkan serta memfilter kartu proyek.

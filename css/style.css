@@ -1,4 +1,5 @@
 /* Gaya portofolio Maica Aprilia Qirania Putri
+
    Palet: #1D3557 (utama), #E63946 (aksen), #F1FAEE (latar)
    Huruf: Poppins (judul), Inter (isi)
    Tata letak: mobile first, titik ubah 768px (tablet) dan 1024px (laptop) */
@@ -344,4 +345,14 @@ body.dark-mode th {
 
 body.dark-mode td {
   border-color: #64748B;
+}
+
+.hampir-penuh{
+  var(--warna-aksen): #F59E0B;
+  var(--ketebalan-garis): 2px;
+
+}
+
+.tombol-kedua{
+  var(--warna-utama): #F59E0B;
 }
