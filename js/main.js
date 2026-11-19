@@ -27,6 +27,7 @@ async function muatKeahlian() {
   }
 }
 
+
 if (daftarSkill) {
   muatKeahlian();
 }
@@ -35,26 +36,41 @@ if (daftarSkill) {
 // Kontak: perbarui penghitung karakter pesan.
 const kotakPesan = document.querySelector("#pesan");
 const hitungKarakter = document.querySelector("#hitung-karakter");
+const peringatanPesan = document.querySelector("#peringatan-pesan");
+const formKontak = kotakPesan ? kotakPesan.closest("form") : null;
+const tombolKosongkan = document.querySelector("#tombol-kosongkan");
+const tombolKosongkanPesan = document.querySelector(".tombol-kedua");
 
-if (kotakPesan && hitungKarakter) {
+if (kotakPesan && hitungKarakter && peringatanPesan) {
   const perbaruiHitungKarakter = () => {
-    hitungKarakter.textContent = `${kotakPesan.value.length}/300 karakter`
-   hampirPenuh = kotakPesan.value.length >= 250;
-    hitungKarakter.textContent = `${kotakPesan.value.length} /250karakter`;
-    classhampirPenuh ? hitungKarakter.classList.add("hampir-penuh") : hitungKarakter.classList.remove("hampir-penuh");
+    const jumlahKarakter = kotakPesan.value.length;
+    const hampirPenuh = jumlahKarakter >= 250;
+
+    hitungKarakter.textContent = `${jumlahKarakter}/300 karakter`;
+    hitungKarakter.classList.toggle("hampir-penuh", hampirPenuh);
+    peringatanPesan.hidden = !hampirPenuh;
+    peringatanPesan.textContent = hampirPenuh
+      ? "Peringatan: pesan sudah mencapai 250 karakter."
+      : "";
   };
 
   kotakPesan.addEventListener("input", perbaruiHitungKarakter);
-  perbaruiHitungKarakter()
-  tombolKosongkan.addEventListenerl("click", () => {
-    kotakPesan.value = "0/300 karakter";
-    perbaruiHitungKarakter()
- 
-  
-  
-   
+  perbaruiHitungKarakter();
+
+  if (formKontak && tombolKosongkan) {
+    tombolKosongkan.addEventListener("click", () => {
+      formKontak.reset();
+      perbaruiHitungKarakter();
+    });
   }
- 
+
+  if (tombolKosongkanPesan) {
+    tombolKosongkanPesan.addEventListener("click", () => {
+      kotakPesan.value = "";
+      perbaruiHitungKarakter();
+      kotakPesan.focus();
+    });
+  }
 }
 
 // Proyek: data dan fungsi untuk menampilkan serta memfilter kartu proyek.

@@ -347,12 +347,11 @@ body.dark-mode td {
   border-color: #64748B;
 }
 
-.hampir-penuh{
-  var(--warna-aksen): #F59E0B;
-  var(--ketebalan-garis): 2px;
-
+.hampir-penuh {
+  font-weight: 600;
 }
 
-.tombol-kedua{
-  var(--warna-utama): #F59E0B;
+.peringatan-pesan {
+  font-weight: 600;
 }
+
