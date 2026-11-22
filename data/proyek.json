@@ -2,8 +2,12 @@
   {
     "judul": "Halaman Profil Pertama",
     "kategori": "HTML",
-    "gambar": "img/maicaaprilia-.jpg",
+    "gambar": "img/portofolio.webp",
     "alt": "Tangkapan layar halaman profil Maica Aprilia Qirania Putri",
+    "width": 280,
+    "height": 210,
+    "loading": "lazy",
+    "decoding": "async",
     "deskripsi": "Halaman web pertama saya, dibuat dengan HTML dasar."
   },
   {
@@ -11,6 +15,10 @@
     "kategori": "HTML",
     "gambar": "img/proyek-kontak.png",
     "alt": "Tangkapan layar form kontak berisi lima isian",
+    "width": 280,
+    "height": 210,
+    "loading": "lazy",
+    "decoding": "async",
     "deskripsi": "Form dengan label dan validasi bawaan browser."
   },
   {
@@ -18,6 +26,10 @@
     "kategori": "HTML",
     "gambar": "img/jadwal.png",
     "alt": "Tangkapan layar tabel jadwal belajar mandiri",
+    "width": 280,
+    "height": 210,
+    "loading": "lazy",
+    "decoding": "async",
     "deskripsi": "Jadwal belajar mingguan dengan thead dan tbody."
   },
   {
@@ -25,6 +37,10 @@
     "kategori": "CSS",
     "gambar": "img/Perbandingan Desain Portofolio Maica.jpg",
     "alt": "Perbandingan desain portofolio Maica",
+    "width": 280,
+    "height": 210,
+    "loading": "lazy",
+    "decoding": "async",
     "deskripsi": "Tampilan responsif untuk ponsel, tablet, dan laptop."
   },
   {
@@ -32,6 +48,10 @@
     "kategori": "JavaScript",
     "gambar": "img/latihan.js.png",
     "alt": "Tangkapan layar kalkulator nilai rapor",
+    "width": 280,
+    "height": 210,
+    "loading": "lazy",
+    "decoding": "async",
     "deskripsi": "Menghitung rata-rata dan predikat nilai dengan JavaScript."
   },
   {
@@ -39,6 +59,10 @@
     "kategori": "JavaScript",
     "gambar": "img/logika.js.png",
     "alt": "Tangkapan layar lima soal logika",
+    "width": 280,
+    "height": 210,
+    "loading": "lazy",
+    "decoding": "async",
     "deskripsi": "Lima fungsi logika yang diuji dengan beberapa masukan."
   }
 ]

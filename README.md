@@ -26,7 +26,7 @@ Website portofolio pribadi yang dibuat sebagai bagian dari pembelajaran Kelas In
 
 ## Skor Lighthouse (Mobile)
 
-- Beranda: Performance **[97]**, Accessibility **[95]**, Best Practices **[96]**, SEO **[isi skor]**.
+- Beranda: Performance **[98]**, Accessibility **[95]**, Best Practices **[96]**, SEO **[isi skor]**.
 - Proyek: Performance **[isi skor]**, Accessibility **[95]**, Best Practices **[96]**, SEO **[isi skor]**.
 - Kontak: Performance **[94r]**, Accessibility **[95]**, Best Practices **[96]**, SEO **[isi skor]**.
 
