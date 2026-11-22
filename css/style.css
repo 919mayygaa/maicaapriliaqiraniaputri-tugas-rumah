@@ -165,6 +165,8 @@ main {
 .daftar-kartu .kartu {
   flex: 1 1 280px;
   margin-bottom: 0;
+  content-visibility: auto;
+  contain-intrinsic-size: 280px 420px;
 }
 
 article img {

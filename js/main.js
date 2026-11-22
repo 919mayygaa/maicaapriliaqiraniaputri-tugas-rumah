@@ -119,8 +119,8 @@ async function muatProyek() {
     try {
         daftarProyek.innerHTML = "Memuat proyek...";
 
-        const response = await fetch(`data/proyek.json?v=${Date.now()}`, {
-          cache: "no-store"
+        const response = await fetch("data/proyek.json", {
+          cache: "force-cache"
         });
 
         if (!response.ok) {
@@ -194,6 +194,36 @@ const statusRepo = document.querySelector("#status-repo");
 async function ambilRepo() {
   if (!daftarRepo || !statusRepo) return;
 
+  const cacheRepo = localStorage.getItem("daftar-repo-github");
+  const waktuCacheRepo = Number(
+    localStorage.getItem("daftar-repo-github-waktu")
+  );
+  const cacheMasihAktif =
+    cacheRepo &&
+    waktuCacheRepo &&
+    Date.now() - waktuCacheRepo < 24 * 60 * 60 * 1000;
+
+  if (cacheMasihAktif) {
+    try {
+      const repos = JSON.parse(cacheRepo);
+      daftarRepo.replaceChildren(...repos.map((repo) => {
+        const item = document.createElement("li");
+        const tautan = document.createElement("a");
+        tautan.href = repo.html_url;
+        tautan.target = "_blank";
+        tautan.rel = "noopener noreferrer";
+        tautan.textContent = repo.name;
+        item.appendChild(tautan);
+        return item;
+      }));
+      statusRepo.textContent =
+        `${repos.length} repositori yang terakhir diperbarui:`;
+      return;
+    } catch {
+      localStorage.removeItem("daftar-repo-github");
+    }
+  }
+
   statusRepo.textContent = "Memuat repository...";
 
   try {
@@ -210,6 +240,14 @@ async function ambilRepo() {
     }
 
     const repos = await response.json();
+    localStorage.setItem(
+      "daftar-repo-github",
+      JSON.stringify(repos.map((repo) => ({
+        name: repo.name,
+        html_url: repo.html_url
+      })))
+    );
+    localStorage.setItem("daftar-repo-github-waktu", String(Date.now()));
 
     const fragment = document.createDocumentFragment();
 
@@ -243,10 +281,12 @@ if (daftarRepo && statusRepo) {
   if ("IntersectionObserver" in window) {
     const pengamatRepo = new IntersectionObserver((entri, pengamat) => {
       if (entri[0].isIntersecting) {
-        ambilRepo();
+        window.setTimeout(() => {
+          ambilRepo();
+        }, 3000);
         pengamat.disconnect();
       }
-    }, { rootMargin: "200px" });
+    }, { rootMargin: "0px" });
 
     pengamatRepo.observe(daftarRepo);
   } else {
