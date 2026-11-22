@@ -82,7 +82,7 @@ const tombolFilter = [
 
 function buatKartuProyek(item) {
   const gambar = item.gambar
-    ? `<img src="${item.gambar}" alt="${item.alt}" width="280" height="210" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='img/jadwal.png'">`
+    ? `<img src="${item.gambar}" alt="${item.alt}" width="280" height="210" loading="lazy" decoding="async">`
     : "";
 
   return `
@@ -108,8 +108,8 @@ async function muatProyek() {
     try {
         daftarProyek.innerHTML = "Memuat proyek...";
 
-        const response = await fetch(`data/proyek.json?v=${Date.now()}`, {
-          cache: "no-store"
+        const response = await fetch("data/proyek.json", {
+          cache: "force-cache"
         });
 
         if (!response.ok) {
@@ -186,7 +186,13 @@ async function ambilRepo() {
   statusRepo.textContent = "Memuat repository...";
 
   try {
-    const response = await fetch(alamatRepo + pilihan);
+    const pengontrol = new AbortController();
+    const batasWaktu = window.setTimeout(() => pengontrol.abort(), 5000);
+    const response = await fetch(alamatRepo + pilihan, {
+      signal: pengontrol.signal,
+      cache: "default"
+    });
+    window.clearTimeout(batasWaktu);
 
     if (!response.ok) {
       throw new Error(`Status ${response.status}`);
@@ -223,7 +229,18 @@ async function ambilRepo() {
 }
 
 if (daftarRepo && statusRepo) {
-  ambilRepo();
+  if ("IntersectionObserver" in window) {
+    const pengamatRepo = new IntersectionObserver((entri, pengamat) => {
+      if (entri[0].isIntersecting) {
+        ambilRepo();
+        pengamat.disconnect();
+      }
+    }, { rootMargin: "200px" });
+
+    pengamatRepo.observe(daftarRepo);
+  } else {
+    ambilRepo();
+  }
 }
 
 
