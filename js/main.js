@@ -37,8 +37,6 @@ if (daftarSkill) {
 const kotakPesan = document.querySelector("#pesan");
 const hitungKarakter = document.querySelector("#hitung-karakter");
 const peringatanPesan = document.querySelector("#peringatan-pesan");
-const formKontak = kotakPesan ? kotakPesan.closest("form") : null;
-const tombolKosongkan = document.querySelector("#tombol-kosongkan");
 const tombolKosongkanPesan = document.querySelector(".tombol-kedua");
 
 if (kotakPesan && hitungKarakter && peringatanPesan) {
@@ -56,13 +54,6 @@ if (kotakPesan && hitungKarakter && peringatanPesan) {
 
   kotakPesan.addEventListener("input", perbaruiHitungKarakter);
   perbaruiHitungKarakter();
-
-  if (formKontak && tombolKosongkan) {
-    tombolKosongkan.addEventListener("click", () => {
-      formKontak.reset();
-      perbaruiHitungKarakter();
-    });
-  }
 
   if (tombolKosongkanPesan) {
     tombolKosongkanPesan.addEventListener("click", () => {
@@ -179,7 +170,6 @@ if (daftarProyek && jumlahProyek) {
 }
 
 
-
 // 5. Repositori GitHub terbaru (halaman Proyek)
 const username = "919mayygaa";
 const alamatRepo = `https://api.github.com/users/${username}/repos`;
@@ -189,32 +179,51 @@ const daftarRepo = document.querySelector("#daftar-repo");
 const statusRepo = document.querySelector("#status-repo");
 
 async function ambilRepo() {
-  statusRepo.textContent = "Memuat...";
+  if (!daftarRepo || !statusRepo) return;
+
+  statusRepo.textContent = "Memuat repository...";
 
   try {
     const response = await fetch(alamatRepo + pilihan);
+
     if (!response.ok) {
       throw new Error(`Status ${response.status}`);
     }
+
     const repos = await response.json();
+
+    const fragment = document.createDocumentFragment();
 
     repos.forEach((repo) => {
       const item = document.createElement("li");
       const tautan = document.createElement("a");
+
       tautan.href = repo.html_url;
       tautan.target = "_blank";
+      tautan.rel = "noopener noreferrer";
       tautan.textContent = repo.name;
+
       item.appendChild(tautan);
-      daftarRepo.appendChild(item);
+      fragment.appendChild(item);
     });
 
-    statusRepo.textContent = `${repos.length} repositori yang terakhir diperbarui:`;
+    daftarRepo.replaceChildren(fragment);
+
+    statusRepo.textContent =
+      `${repos.length} repositori yang terakhir diperbarui:`;
+
   } catch (error) {
-    statusRepo.textContent = "Maaf, daftar repositori gagal dimuat. Periksa username atau coba lagi nanti.";
+    statusRepo.textContent =
+      "Daftar repositori gagal dimuat. Silakan coba lagi nanti.";
+
     console.error(error);
   }
 }
 
-if (daftarRepo) {
+if (daftarRepo && statusRepo) {
   ambilRepo();
 }
+
+
+
+
