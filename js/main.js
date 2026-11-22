@@ -82,7 +82,7 @@ const tombolFilter = [
 
 function buatKartuProyek(item) {
   const gambar = item.gambar
-    ? `<img src="${item.gambar}" alt="${item.alt}" width="280" height="210" loading="lazy" decoding="async">`
+    ? `<img src="${item.gambar}" alt="${item.alt}" width="280" height="210" loading="lazy" decoding="async" onerror="this.onerror=null;this.src='img/jadwal.png'">`
     : "";
 
   return `
@@ -108,7 +108,9 @@ async function muatProyek() {
     try {
         daftarProyek.innerHTML = "Memuat proyek...";
 
-        const response = await fetch("data/proyek.json");
+        const response = await fetch(`data/proyek.json?v=${Date.now()}`, {
+          cache: "no-store"
+        });
 
         if (!response.ok) {
             throw new Error("Gagal mengambil data proyek");

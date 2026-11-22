@@ -1,19 +1,41 @@
 # Portofolio Maica Aprilia Qirania Putri
-Website portofolio pribadi yang saya buat di Kelas Industri UBIG (Paket 1, Minggu 01 sampai 09).
-Website ini tampil rapi di ponsel, tablet, dan laptop.
-## Tampilan
-![Tampilan beranda portofolio](img/jadwal.png)
-![Tampilan beranda portofolio](img/Screenshot%202026-10-26%20114132.png)
-![Tampilan beranda portofolio](img/proyek-kontak.png)
+
+Website portofolio pribadi yang dibuat sebagai bagian dari pembelajaran Kelas Industri UBIG. Website ini menampilkan profil, keahlian, proyek, dan informasi kontak.
+
+## Tampilan Website
+
+![Tampilan Beranda Portofolio](img/tampilan%20full%20web.png)
+
 ## Fitur
-- Halaman **Beranda** berisi profil, hobi, cita-cita, keahlian, dan jadwal belajar
-- Halaman **Proyek** berisi daftar proyek dalam bentuk kartu
-- Halaman **Kontak** berisi form untuk menghubungi saya
-- Tampilan responsif dengan Flexbox dan *media query*
+
+- **Beranda:** Menampilkan profil dan daftar keahlian.
+- **Proyek:** Menampilkan daftar proyek dengan fitur filter kategori.
+- **GitHub:** Menampilkan repositori terbaru dari GitHub.
+- **Kontak:** Menyediakan formulir kontak dengan penghitung karakter pesan.
+- **Mode Gelap:** Mengubah tampilan website menjadi mode gelap.
+- **Responsif:** Tampilan menyesuaikan ukuran layar perangkat.
+
 ## Teknologi
+
 - HTML5
-- CSS3 (Flexbox dan media query)
+- CSS3
+- JavaScript
+- JSON
 - Git dan GitHub
+- Vercel
+
+## Skor Lighthouse (Mobile)
+
+- Beranda: Performance **[isi skor]**, Accessibility **[isi skor]**, Best Practices **[isi skor]**, SEO **[isi skor]**.
+- Proyek: Performance **[isi skor]**, Accessibility **[isi skor]**, Best Practices **[isi skor]**, SEO **[isi skor]**.
+- Kontak: Performance **[isi skor]**, Accessibility **[isi skor]**, Best Practices **[isi skor]**, SEO **[isi skor]**.
+
 ## Tautan
-- Website: menyusul setelah *deploy* ke Vercel
-- Dibuat oleh: Maica Aprilia Qirania Putri, SMKS BRANTAS KARANGKATES
+
+- Website: [masukkan link Vercel]
+- GitHub: [masukkan link repository]
+
+## Pembuat
+
+Maica Aprilia Qirania Putri
+SMK Brantas Karangkates — Kelas 10 PPLG 1
