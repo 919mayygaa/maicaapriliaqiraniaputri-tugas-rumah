@@ -4,8 +4,8 @@
     "kategori": "HTML",
     "gambar": "img/maicaaprilia-.jpg",
     "alt": "Tangkapan layar halaman profil Maica Aprilia Qirania Putri",
-    "width": 280,
-    "height": 210,
+    "width": 560,
+    "height": 433,
     "loading": "lazy",
     "decoding": "async",
     "deskripsi": "Halaman web pertama saya, dibuat dengan HTML dasar."
@@ -13,10 +13,10 @@
   {
     "judul": "Form Kontak",
     "kategori": "HTML",
-    "gambar": "img/proyek-kontak.png",
+    "gambar": "img/proyek-kontak.jpg",
     "alt": "Tangkapan layar form kontak berisi lima isian",
-    "width": 280,
-    "height": 210,
+    "width": 560,
+    "height": 367,
     "loading": "lazy",
     "decoding": "async",
     "deskripsi": "Form dengan label dan validasi bawaan browser."
@@ -24,10 +24,10 @@
   {
     "judul": "Tabel Jadwal Belajar",
     "kategori": "HTML",
-    "gambar": "img/jadwal.png",
+    "gambar": "img/jadwal.jpg",
     "alt": "Tangkapan layar tabel jadwal belajar mandiri",
-    "width": 280,
-    "height": 210,
+    "width": 560,
+    "height": 554,
     "loading": "lazy",
     "decoding": "async",
     "deskripsi": "Jadwal belajar mingguan dengan thead dan tbody."
@@ -37,8 +37,8 @@
     "kategori": "CSS",
     "gambar": "img/Perbandingan Desain Portofolio Maica.jpg",
     "alt": "Perbandingan desain portofolio Maica",
-    "width": 280,
-    "height": 210,
+    "width": 560,
+    "height": 373,
     "loading": "lazy",
     "decoding": "async",
     "deskripsi": "Tampilan responsif untuk ponsel, tablet, dan laptop."
@@ -46,10 +46,10 @@
   {
     "judul": "Kalkulator Nilai Rapor",
     "kategori": "JavaScript",
-    "gambar": "img/latihan.js.png",
+    "gambar": "img/latihan-js.jpg",
     "alt": "Tangkapan layar kalkulator nilai rapor",
-    "width": 280,
-    "height": 210,
+    "width": 560,
+    "height": 287,
     "loading": "lazy",
     "decoding": "async",
     "deskripsi": "Menghitung rata-rata dan predikat nilai dengan JavaScript."
@@ -57,10 +57,10 @@
   {
     "judul": "Lima Soal Logika",
     "kategori": "JavaScript",
-    "gambar": "img/logika.js.png",
+    "gambar": "img/logika-js.jpg",
     "alt": "Tangkapan layar lima soal logika",
-    "width": 280,
-    "height": 210,
+    "width": 560,
+    "height": 377,
     "loading": "lazy",
     "decoding": "async",
     "deskripsi": "Lima fungsi logika yang diuji dengan beberapa masukan."

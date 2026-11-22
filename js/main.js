@@ -108,7 +108,7 @@ function tampilkanProyek(daftar) {
     gambar.addEventListener("error", () => {
       gambar.removeAttribute("srcset");
       if (daftar[indeks].judul === "Tabel Jadwal Belajar") {
-        gambar.src = "img/jadwal.png";
+        gambar.src = "img/jadwal.jpg";
       }
     }, { once: true });
   });
@@ -185,113 +185,28 @@ if (daftarProyek && jumlahProyek) {
 
 // 5. Repositori GitHub terbaru (halaman Proyek)
 const username = "919mayygaa";
-const alamatRepo = `https://api.github.com/users/${username}/repos`;
-const pilihan = "?sort=updated&per_page=6";
 
 const daftarRepo = document.querySelector("#daftar-repo");
 const statusRepo = document.querySelector("#status-repo");
 
-async function ambilRepo() {
+function tampilkanTautanRepositori() {
   if (!daftarRepo || !statusRepo) return;
 
-  const cacheRepo = localStorage.getItem("daftar-repo-github");
-  const waktuCacheRepo = Number(
-    localStorage.getItem("daftar-repo-github-waktu")
-  );
-  const cacheMasihAktif =
-    cacheRepo &&
-    waktuCacheRepo &&
-    Date.now() - waktuCacheRepo < 24 * 60 * 60 * 1000;
+  const item = document.createElement("li");
+  const tautan = document.createElement("a");
 
-  if (cacheMasihAktif) {
-    try {
-      const repos = JSON.parse(cacheRepo);
-      daftarRepo.replaceChildren(...repos.map((repo) => {
-        const item = document.createElement("li");
-        const tautan = document.createElement("a");
-        tautan.href = repo.html_url;
-        tautan.target = "_blank";
-        tautan.rel = "noopener noreferrer";
-        tautan.textContent = repo.name;
-        item.appendChild(tautan);
-        return item;
-      }));
-      statusRepo.textContent =
-        `${repos.length} repositori yang terakhir diperbarui:`;
-      return;
-    } catch {
-      localStorage.removeItem("daftar-repo-github");
-    }
-  }
+  tautan.href = `https://github.com/${username}`;
+  tautan.target = "_blank";
+  tautan.rel = "noopener noreferrer";
+  tautan.textContent = "Lihat semua repositori di GitHub";
 
-  statusRepo.textContent = "Memuat repository...";
-
-  try {
-    const pengontrol = new AbortController();
-    const batasWaktu = window.setTimeout(() => pengontrol.abort(), 5000);
-    const response = await fetch(alamatRepo + pilihan, {
-      signal: pengontrol.signal,
-      cache: "default"
-    });
-    window.clearTimeout(batasWaktu);
-
-    if (!response.ok) {
-      throw new Error(`Status ${response.status}`);
-    }
-
-    const repos = await response.json();
-    localStorage.setItem(
-      "daftar-repo-github",
-      JSON.stringify(repos.map((repo) => ({
-        name: repo.name,
-        html_url: repo.html_url
-      })))
-    );
-    localStorage.setItem("daftar-repo-github-waktu", String(Date.now()));
-
-    const fragment = document.createDocumentFragment();
-
-    repos.forEach((repo) => {
-      const item = document.createElement("li");
-      const tautan = document.createElement("a");
-
-      tautan.href = repo.html_url;
-      tautan.target = "_blank";
-      tautan.rel = "noopener noreferrer";
-      tautan.textContent = repo.name;
-
-      item.appendChild(tautan);
-      fragment.appendChild(item);
-    });
-
-    daftarRepo.replaceChildren(fragment);
-
-    statusRepo.textContent =
-      `${repos.length} repositori yang terakhir diperbarui:`;
-
-  } catch (error) {
-    statusRepo.textContent =
-      "Daftar repositori gagal dimuat. Silakan coba lagi nanti.";
-
-    console.error(error);
-  }
+  item.appendChild(tautan);
+  daftarRepo.replaceChildren(item);
+  statusRepo.textContent = "Repositori GitHub Maica:";
 }
 
 if (daftarRepo && statusRepo) {
-  if ("IntersectionObserver" in window) {
-    const pengamatRepo = new IntersectionObserver((entri, pengamat) => {
-      if (entri[0].isIntersecting) {
-        window.setTimeout(() => {
-          ambilRepo();
-        }, 3000);
-        pengamat.disconnect();
-      }
-    }, { rootMargin: "0px" });
-
-    pengamatRepo.observe(daftarRepo);
-  } else {
-    ambilRepo();
-  }
+  tampilkanTautanRepositori();
 }
 
 
