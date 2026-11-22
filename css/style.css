@@ -156,22 +156,75 @@ main {
 }
 
 .daftar-kartu {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
 .daftar-kartu .kartu {
-  flex: 1 1 280px;
   margin-bottom: 0;
   content-visibility: auto;
   contain-intrinsic-size: 280px 420px;
 }
 
 article img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   border-radius: 8px;
   border: 1px solid #DDDDDD;
+}
+
+.bagian-proyek {
+  margin-bottom: 1.5rem;
+}
+
+.filter {
+  margin-bottom: 0.75rem;
+}
+
+#jumlah-proyek {
+  min-height: 1.5rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.bagian-repositori {
+  margin-bottom: 1.5rem;
+}
+
+.daftar-repo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.daftar-repo li {
+  border: 1px solid var(--warna-garis);
+  border-radius: 8px;
+  background-color: var(--warna-latar);
+}
+
+.daftar-repo a {
+  display: block;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.bagian-faq details {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--warna-garis);
+}
+
+.bagian-faq details:last-child {
+  border-bottom: 0;
 }
 
 /* 5. Tabel */
@@ -259,6 +312,11 @@ footer a {
   .kartu {
     padding: 1.5rem;
   }
+
+  .daftar-kartu,
+  .daftar-repo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 /* 9. Laptop: lebar layar 1024px ke atas */
@@ -273,6 +331,10 @@ footer a {
 
   .hero h2 {
     font-size: 2.75rem;
+  }
+
+  .daftar-kartu {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

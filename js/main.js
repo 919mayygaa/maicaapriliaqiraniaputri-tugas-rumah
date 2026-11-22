@@ -82,7 +82,7 @@ const tombolFilter = [
 
 function buatKartuProyek(item) {
   const gambar = item.gambar
-    ? `<img src="${item.gambar}" alt="${item.alt}" width="280" height="210" loading="lazy" decoding="async">`
+    ? `<img src="${item.gambar}" alt="${item.alt}" width="${item.width || 280}" height="${item.height || 210}" loading="${item.loading || "lazy"}" decoding="${item.decoding || "async"}">`
     : "";
 
   return `
