@@ -1,7 +1,8 @@
 const formKalkulator = document.querySelector("#form-kalkulator");
 const hasilKalkulator = document.querySelector("#hasil-kalkulator");
 
-formKalkulator.addEventListener("submit", (event) => {
+if (formKalkulator && hasilKalkulator) {
+  formKalkulator.addEventListener("submit", (event) => {
 	event.preventDefault();
 
 	const nilaiTugas = Number(document.querySelector("#nilai-tugas").value);
@@ -27,4 +28,5 @@ formKalkulator.addEventListener("submit", (event) => {
 
 	hasilKalkulator.textContent = `Nilai akhir: ${formatNilai} | Predikat: ${predikat} | ${status}`;
 	hasilKalkulator.hidden = false;
-});
+  });
+}
