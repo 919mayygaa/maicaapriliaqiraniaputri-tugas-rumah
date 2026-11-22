@@ -10,8 +10,9 @@
   <meta property="og:title" content="Maica Aprilia Qirania Putri | Proyek">
   <meta property="og:description" content="Daftar proyek HTML, CSS, dan JavaScript Maica serta repositori GitHub terbaru.">
   <title>Maica Aprilia Qirania Putri | Proyek</title>
+  <link rel="preload" href="data/proyek.json" as="fetch" crossorigin>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/main.js" defer></script>
+  <script src="js/proyek.js" defer></script>
   <script src="js/tema.js" defer></script>
 </head>
 <body>
@@ -60,8 +61,13 @@
       <section class="kartu bagian-repositori">
         <h2>Repositori GitHub Saya</h2>
         <p>Daftar repositori terbaru yang diambil langsung dari GitHub.</p>
-        <p id="status-repo"></p>
-        <ul class="daftar-repo" id="daftar-repo"></ul>
+        <ul class="daftar-repo">
+          <li>
+            <a href="https://github.com/919mayygaa" target="_blank" rel="noopener noreferrer">
+              Lihat semua repositori di GitHub
+            </a>
+          </li>
+        </ul>
       </section>
 
       <!-- FAQ dengan details dan summary -->
