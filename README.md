@@ -1,8 +1,8 @@
 # Portofolio Maica Aprilia Qirania Putri
-Website portofolio pribadi yang saya buat di Kelas Industri UBIG (Paket 1, Minggu 01 sampai 05).
+Website portofolio pribadi yang saya buat di Kelas Industri UBIG (Paket 1, Minggu 01 sampai 09).
 Website ini tampil rapi di ponsel, tablet, dan laptop.
 ## Tampilan
-![Tampilan beranda portofolio](img/jadwal.PNG)
+![Tampilan beranda portofolio](img/jadwal.png)
 ![Tampilan beranda portofolio](img/Screenshot%202026-10-26%20114132.png)
 ![Tampilan beranda portofolio](img/proyek-kontak.png)
 ## Fitur
