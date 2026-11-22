@@ -101,6 +101,17 @@ function tampilkanProyek(daftar) {
   }
 
   daftarProyek.innerHTML = daftar.map(buatKartuProyek).join("");
+  daftarProyek.querySelectorAll("article.kartu").forEach((kartu, indeks) => {
+    const gambar = kartu.querySelector("img");
+    if (!gambar) return;
+
+    gambar.addEventListener("error", () => {
+      gambar.removeAttribute("srcset");
+      if (daftar[indeks].judul === "Tabel Jadwal Belajar") {
+        gambar.src = "img/jadwal.png";
+      }
+    }, { once: true });
+  });
   jumlahProyek.textContent = `Menampilkan ${daftar.length} dari ${proyek.length} proyek.`;
 }
 
@@ -108,8 +119,8 @@ async function muatProyek() {
     try {
         daftarProyek.innerHTML = "Memuat proyek...";
 
-        const response = await fetch("data/proyek.json", {
-          cache: "force-cache"
+        const response = await fetch(`data/proyek.json?v=${Date.now()}`, {
+          cache: "no-store"
         });
 
         if (!response.ok) {
