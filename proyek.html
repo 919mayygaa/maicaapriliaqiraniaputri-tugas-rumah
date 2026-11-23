@@ -7,9 +7,38 @@
   <meta name="author" content="Maica Aprilia Qirania Putri">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:site_name" content="Maica Aprilia Qirania Putri">
   <meta property="og:title" content="Maica Aprilia Qirania Putri | Proyek">
   <meta property="og:description" content="Daftar proyek HTML, CSS, dan JavaScript Maica serta repositori GitHub terbaru.">
+  <meta name="twitter:card" content="summary">
   <title>Maica Aprilia Qirania Putri | Proyek</title>
+  <script>
+    if (window.location.protocol === "https:" || window.location.protocol === "http:") {
+      const canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      canonical.href = window.location.origin + window.location.pathname;
+      document.head.appendChild(canonical);
+
+      const ogUrl = document.createElement("meta");
+      ogUrl.setAttribute("property", "og:url");
+      ogUrl.content = canonical.href;
+      document.head.appendChild(ogUrl);
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Proyek Maica Aprilia Qirania Putri",
+      "description": "Kumpulan proyek HTML, CSS, dan JavaScript.",
+      "inLanguage": "id-ID",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Portofolio Maica Aprilia Qirania Putri"
+      }
+    }
+  </script>
   <link rel="preload" href="data/proyek.json" as="fetch" crossorigin>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/proyek.js" defer></script>
@@ -55,7 +84,34 @@
           <button type="button" class="tombol-filter" id="filter-javascript">JavaScript</button>
         </div>
         <p id="jumlah-proyek"></p>
-        <div class="daftar-kartu" id="daftar-proyek"></div>
+        <div class="daftar-kartu" id="daftar-proyek">
+          <noscript>
+            <article class="kartu">
+              <h3>Halaman Profil Pertama</h3>
+              <p>Halaman web pertama saya, dibuat dengan HTML dasar.</p>
+            </article>
+            <article class="kartu">
+              <h3>Form Kontak</h3>
+              <p>Form dengan label dan validasi bawaan browser.</p>
+            </article>
+            <article class="kartu">
+              <h3>Tabel Jadwal Belajar</h3>
+              <p>Jadwal belajar mingguan dengan thead dan tbody.</p>
+            </article>
+            <article class="kartu">
+              <h3>Portofolio Responsif</h3>
+              <p>Tampilan responsif untuk ponsel, tablet, dan laptop.</p>
+            </article>
+            <article class="kartu">
+              <h3>Kalkulator Nilai Rapor</h3>
+              <p>Menghitung rata-rata dan predikat nilai dengan JavaScript.</p>
+            </article>
+            <article class="kartu">
+              <h3>Lima Soal Logika</h3>
+              <p>Lima fungsi logika yang diuji dengan beberapa masukan.</p>
+            </article>
+          </noscript>
+        </div>
       </section>
 
       <section class="kartu bagian-repositori">

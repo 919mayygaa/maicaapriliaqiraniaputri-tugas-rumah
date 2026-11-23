@@ -11,7 +11,7 @@ const tombolFilter = [filterSemua, filterHTML, filterCSS, filterJavaScript]
 
 function buatKartuProyek(item) {
   const gambar = item.gambar
-    ? `<img src="${item.gambar}" alt="${item.alt}" width="${item.width || 560}" height="${item.height || 420}" loading="lazy" decoding="async">`
+    ? `<img src="${item.gambar}" alt="${item.alt}" width="${item.width || 560}" height="${item.height || 420}" loading="${item.loading || "lazy"}" decoding="${item.decoding || "async"}">`
     : "";
 
   return `
