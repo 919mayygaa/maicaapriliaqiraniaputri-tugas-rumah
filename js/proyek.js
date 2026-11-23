@@ -8,6 +8,8 @@ const filterCSS = document.querySelector("#filter-css");
 const filterJavaScript = document.querySelector("#filter-javascript");
 const tombolFilter = [filterSemua, filterHTML, filterCSS, filterJavaScript]
   .filter(Boolean);
+const daftarRepo = document.querySelector("#daftar-repo");
+const statusRepo = document.querySelector("#status-repo");
 
 function buatKartuProyek(item) {
   const gambar = item.gambar
@@ -56,6 +58,48 @@ function aktifkanFilter(tombolDipilih) {
   });
 }
 
+async function muatRepositori() {
+  if (!daftarRepo) return;
+
+  try {
+    const response = await fetch(
+      "https://api.github.com/users/919mayygaa/repos?sort=updated&per_page=6",
+      { headers: { Accept: "application/vnd.github+json" } }
+    );
+    if (!response.ok) throw new Error(`Status ${response.status}`);
+
+    const repositori = await response.json();
+    const daftarTerbaru = repositori
+      .filter((repo) => !repo.fork)
+      .slice(0, 6);
+
+    if (statusRepo) statusRepo.remove();
+
+    if (daftarTerbaru.length === 0) {
+      const kosong = document.createElement("li");
+      kosong.textContent = "Belum ada repositori publik.";
+      daftarRepo.prepend(kosong);
+      return;
+    }
+
+    daftarTerbaru.forEach((repo) => {
+      const item = document.createElement("li");
+      const tautan = document.createElement("a");
+      tautan.href = repo.html_url;
+      tautan.target = "_blank";
+      tautan.rel = "noopener noreferrer";
+      tautan.textContent = repo.name;
+      item.appendChild(tautan);
+      daftarRepo.prepend(item);
+    });
+  } catch (error) {
+    if (statusRepo) {
+      statusRepo.textContent = "Repositori tidak dapat dimuat sementara.";
+    }
+    console.error(error);
+  }
+}
+
 if (daftarProyek && jumlahProyek) {
   muatProyek();
 
@@ -66,6 +110,8 @@ if (daftarProyek && jumlahProyek) {
       tampilkanProyek(proyek);
     });
   }
+
+  muatRepositori();
 
   [
     [filterHTML, "HTML"],

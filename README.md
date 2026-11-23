@@ -27,13 +27,13 @@ Website portofolio pribadi yang dibuat sebagai bagian dari pembelajaran Kelas In
 ## Skor Lighthouse (Mobile)
 
 - Beranda: Performance **[98]**, Accessibility **[95]**, Best Practices **[96]**, SEO **[100]**.
-- Proyek: Performance **[isi skor]**, Accessibility **[95]**, Best Practices **[96]**, SEO **[100]**.
+- Proyek: Performance **[80]**, Accessibility **[95]**, Best Practices **[96]**, SEO **[100]**.
 - Kontak: Performance **[98]**, Accessibility **[95]**, Best Practices **[96]**, SEO **[100]**.
 
 ## Tautan
 
 - Website: [masukkan link Vercel]
-- GitHub: [masukkan link repository]
+- GitHub: [masukkan link repository] 
 
 ## Pembuat
 

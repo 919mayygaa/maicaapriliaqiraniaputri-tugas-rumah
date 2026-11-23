@@ -13,7 +13,27 @@
   <meta property="og:description" content="Daftar proyek HTML, CSS, dan JavaScript Maica serta repositori GitHub terbaru.">
   <meta name="twitter:card" content="summary">
   <title>Maica Aprilia Qirania Putri | Proyek</title>
-  <link rel="canonical" href="./proyek.html">
+  <script>
+    if (window.location.protocol === "https:" || window.location.protocol === "http:") {
+      const canonicalUrl = window.location.origin + window.location.pathname;
+
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (!canonical) {
+        canonical = document.createElement("link");
+        canonical.setAttribute("rel", "canonical");
+        document.head.appendChild(canonical);
+      }
+      canonical.href = canonicalUrl;
+
+      let ogUrl = document.querySelector('meta[property="og:url"]');
+      if (!ogUrl) {
+        ogUrl = document.createElement("meta");
+        ogUrl.setAttribute("property", "og:url");
+        document.head.appendChild(ogUrl);
+      }
+      ogUrl.setAttribute("content", canonicalUrl);
+    }
+  </script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -105,7 +125,8 @@
       <section class="kartu bagian-repositori">
         <h2>Repositori GitHub Saya</h2>
         <p>Daftar repositori terbaru yang diambil langsung dari GitHub.</p>
-        <ul class="daftar-repo">
+        <ul class="daftar-repo" id="daftar-repo">
+          <li id="status-repo">Memuat repositori...</li>
           <li>
             <a href="https://github.com/919mayygaa" target="_blank" rel="noopener noreferrer">
               Lihat semua repositori di GitHub
