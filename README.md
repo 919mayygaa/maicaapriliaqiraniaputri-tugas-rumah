@@ -39,3 +39,5 @@ Website portofolio pribadi yang dibuat sebagai bagian dari pembelajaran Kelas In
 
 Maica Aprilia Qirania Putri
 SMK Brantas Karangkates — Kelas 10 PPLG 1
+
+
