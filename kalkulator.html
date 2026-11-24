@@ -7,9 +7,46 @@
   <meta name="author" content="Maica Aprilia Qirania Putri">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:site_name" content="Maica Aprilia Qirania Putri">
   <meta property="og:title" content="Maica Aprilia Qirania Putri | Kalkulator Nilai">
   <meta property="og:description" content="Kalkulator nilai tugas, UTS, dan UAS Maica Aprilia Qirania Putri.">
+  <meta property="og:image" content="img/latihan-js.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Maica Aprilia Qirania Putri | Kalkulator Nilai">
+  <meta name="twitter:description" content="Hitung nilai tugas, UTS, UAS, dan rata-rata secara cepat.">
+  <meta name="twitter:image" content="img/latihan-js.jpg">
   <title>Maica Aprilia Qirania Putri | Kalkulator Nilai</title>
+  <script>
+    if (window.location.protocol === "https:" || window.location.protocol === "http:") {
+      const pageUrl = window.location.origin + window.location.pathname;
+      const imageUrl = window.location.origin + "/img/latihan-js.jpg";
+
+      const canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      canonical.setAttribute("href", pageUrl);
+      document.head.appendChild(canonical);
+
+      const ogUrl = document.createElement("meta");
+      ogUrl.setAttribute("property", "og:url");
+      ogUrl.setAttribute("content", pageUrl);
+      document.head.appendChild(ogUrl);
+
+      document.querySelector('meta[property="og:image"]')?.setAttribute("content", imageUrl);
+      document.querySelector('meta[name="twitter:image"]')?.setAttribute("content", imageUrl);
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Kalkulator Nilai Maica",
+      "description": "Kalkulator nilai tugas, UTS, dan UAS.",
+      "inLanguage": "id-ID",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All"
+    }
+  </script>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/kalkulator.js" defer></script>
   <script src="js/tema.js" defer></script>

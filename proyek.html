@@ -11,7 +11,11 @@
   <meta property="og:site_name" content="Maica Aprilia Qirania Putri">
   <meta property="og:title" content="Maica Aprilia Qirania Putri | Proyek">
   <meta property="og:description" content="Daftar proyek HTML, CSS, dan JavaScript Maica serta repositori GitHub terbaru.">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="img/Perbandingan Desain Portofolio Maica.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Maica Aprilia Qirania Putri | Proyek">
+  <meta name="twitter:description" content="Lihat proyek HTML, CSS, dan JavaScript Maica Aprilia Qirania Putri.">
+  <meta name="twitter:image" content="img/Perbandingan Desain Portofolio Maica.jpg">
   <title>Maica Aprilia Qirania Putri | Proyek</title>
   <script>
     if (window.location.protocol === "https:" || window.location.protocol === "http:") {
@@ -24,6 +28,14 @@
         document.head.appendChild(canonical);
       }
       canonical.href = canonicalUrl;
+      document.querySelector('meta[property="og:image"]')?.setAttribute(
+        "content",
+        window.location.origin + "/img/Perbandingan%20Desain%20Portofolio%20Maica.jpg"
+      );
+      document.querySelector('meta[name="twitter:image"]')?.setAttribute(
+        "content",
+        window.location.origin + "/img/Perbandingan%20Desain%20Portofolio%20Maica.jpg"
+      );
 
       let ogUrl = document.querySelector('meta[property="og:url"]');
       if (!ogUrl) {
@@ -37,14 +49,39 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      "name": "Proyek Maica Aprilia Qirania Putri",
-      "description": "Kumpulan proyek HTML, CSS, dan JavaScript.",
-      "inLanguage": "id-ID",
-      "isPartOf": {
-        "@type": "WebSite",
-        "name": "Portofolio Maica Aprilia Qirania Putri"
-      }
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "name": "Proyek Maica Aprilia Qirania Putri",
+          "description": "Kumpulan proyek HTML, CSS, dan JavaScript.",
+          "inLanguage": "id-ID",
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "Portofolio Maica Aprilia Qirania Putri"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Bahasa apa yang dipakai untuk membuat proyek ini?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Proyek di halaman ini dibuat dengan HTML, CSS, dan JavaScript."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Apakah saya menerima pesanan pembuatan website?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Belum, saya masih belajar. Kamu dapat menghubungi saya melalui halaman Kontak."
+              }
+            }
+          ]
+        }
+      ]
     }
   </script>
   <link rel="preload" href="data/proyek.json" as="fetch" crossorigin>

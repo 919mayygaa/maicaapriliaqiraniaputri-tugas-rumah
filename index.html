@@ -7,9 +7,58 @@
   <meta name="author" content="Maica Aprilia Qirania Putri">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:site_name" content="Maica Aprilia Qirania Putri">
   <meta property="og:title" content="Maica Aprilia Qirania Putri | Beranda">
   <meta property="og:description" content="Portofolio profil, keahlian, jadwal belajar, dan proyek web Maica Aprilia Qirania Putri.">
+  <meta property="og:image" content="img/6264645036481909280_99.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Maica Aprilia Qirania Putri | Beranda">
+  <meta name="twitter:description" content="Profil, keahlian, jadwal belajar, dan proyek web Maica Aprilia Qirania Putri.">
+  <meta name="twitter:image" content="img/6264645036481909280_99.jpg">
   <title>Maica Aprilia Qirania Putri | Beranda</title>
+  <script>
+    if (window.location.protocol === "https:" || window.location.protocol === "http:") {
+      const pageUrl = window.location.origin + window.location.pathname;
+      const imageUrl = window.location.origin + "/img/6264645036481909280_99.jpg";
+
+      const canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      canonical.setAttribute("href", pageUrl);
+      document.head.appendChild(canonical);
+
+      const ogUrl = document.createElement("meta");
+      ogUrl.setAttribute("property", "og:url");
+      ogUrl.setAttribute("content", pageUrl);
+      document.head.appendChild(ogUrl);
+
+      document.querySelector('meta[property="og:image"]')?.setAttribute("content", imageUrl);
+      document.querySelector('meta[name="twitter:image"]')?.setAttribute("content", imageUrl);
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "Portofolio Maica Aprilia Qirania Putri",
+          "inLanguage": "id-ID",
+          "description": "Portofolio pribadi Maica Aprilia Qirania Putri."
+        },
+        {
+          "@type": "Person",
+          "name": "Maica Aprilia Qirania Putri",
+          "jobTitle": "Junior Web Developer",
+          "knowsAbout": ["HTML", "CSS", "JavaScript", "Web Development"],
+          "sameAs": [
+            "https://github.com/919mayygaa",
+            "https://www.youtube.com/@maicaxpplg_1"
+          ]
+        }
+      ]
+    }
+  </script>
   <link rel="preload" href="data/keahlian.json" as="fetch" crossorigin>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/beranda.js" defer></script>

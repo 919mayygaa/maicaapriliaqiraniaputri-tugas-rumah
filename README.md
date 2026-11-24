@@ -26,9 +26,9 @@ Website portofolio pribadi yang dibuat sebagai bagian dari pembelajaran Kelas In
 
 ## Skor Lighthouse (Mobile)
 
-- Beranda: Performance **[98]**, Accessibility **[95]**, Best Practices **[96]**, SEO **[100]**.
-- Proyek: Performance **[80]**, Accessibility **[95]**, Best Practices **[96]**, SEO **[100]**.
-- Kontak: Performance **[98]**, Accessibility **[95]**, Best Practices **[96]**, SEO **[100]**.
+- Beranda: Performance **[99]**, Accessibility **[95]**, Best Practices **[96]**, SEO **[100]**.
+- Proyek: Performance **[94]**, Accessibility **[95]**, Best Practices **[96]**, SEO **[100]**.
+- Kontak: Performance **[99]**, Accessibility **[95]**, Best Practices **[96]**, SEO **[100]**.
 
 ## Tautan
 
@@ -39,5 +39,6 @@ Website portofolio pribadi yang dibuat sebagai bagian dari pembelajaran Kelas In
 
 Maica Aprilia Qirania Putri
 SMK Brantas Karangkates — Kelas 10 PPLG 1
+
 
 
